@@ -1,14 +1,17 @@
 package main
 
-import "fmt"
-
 func main() {
-	cards := []string{"Two of Hearts", newCard()}
+	// Initialize a new deck type, which is
+	// a slice of strings.
+	cards := deck{"Two of Hearts", newCard()}
+
+	// Append a card to our cards variable and then
+	// re-assign it back to our cards variable.
+	// The append function does not mutate the
+	// origin slice but will return a new slice.
 	cards = append(cards, "Jack of Spades")
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards.print()
 }
 
 func newCard() string {
