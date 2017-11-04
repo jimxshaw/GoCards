@@ -29,3 +29,12 @@ func (d deck) print() {
 		fmt.Println(i, card)
 	}
 }
+
+// Go has support to return more than one value.
+func deal(d deck, handSize int) (deck, deck) {
+	// First slice contains values from the
+	// start of the slice up to but not including
+	// the handSize and second slice contains values
+	// from the start of the handSize until the end.
+	return d[:handSize], d[handSize:]
+}
