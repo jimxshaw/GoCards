@@ -11,4 +11,6 @@ func main() {
 
 	hand.saveToFile("hand")
 	remainingCards.saveToFile("remaining")
+
+	newDeckFromFile("hand").print()
 }
