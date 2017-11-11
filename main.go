@@ -5,12 +5,16 @@ func main() {
 	// a slice of strings.
 	cards := newDeck()
 
-	// Specify two values that will receive the
-	// two returned values from the function.
-	hand, remainingCards := deal(cards, 5)
+	cards.shuffle()
 
-	hand.saveToFile("hand")
-	remainingCards.saveToFile("remaining")
+	cards.print()
 
-	newDeckFromFile("hand").print()
+	// // Specify two values that will receive the
+	// // two returned values from the function.
+	// hand, remainingCards := deal(cards, 5)
+
+	// hand.saveToFile("hand")
+	// remainingCards.saveToFile("remaining")
+
+	// newDeckFromFile("hand").print()
 }
